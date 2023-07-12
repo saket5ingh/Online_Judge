@@ -29,9 +29,10 @@ This project is built using Django, a high-level Python web framework. It utiliz
 ```shell
 git clone https://github.com/your-username/online-judge-platform.git
 cd online-judge-platform
-
+```
 
 2. Create and activate a virtual environment:
 ```shell
 python3 -m venv env
 source env/bin/activate
+```
