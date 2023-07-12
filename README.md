@@ -27,7 +27,7 @@ This project is built using Django, a high-level Python web framework. It utiliz
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/your-username/online-judge-platform.git
+git clone [https://github.com/your-username/online-judge-platform](https://github.com/saket5ingh/Online_Judge).git
 cd online-judge-platform
 ```
 
@@ -63,7 +63,6 @@ python manage.py runserver
 - Click on a problem to view the problem details.
 - Submit your code solution for a problem through the submission page.
 - View the verdict and results of your code submission.
-- Check the leaderboard to see your score and ranking.
 
 ## Contributing
 
@@ -79,5 +78,11 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 
 - The Online Judge project was inspired by similar coding contest platforms and online judge systems.
-- We would like to thank the Django, Docker, and PostgreSQL communities for their excellent tools and resources.
+- I would like to thank the Django, Docker, and PostgreSQL communities for their excellent tools and resources.
+  
+## Contact
+If you have any questions or inquiries, please feel free to reach out to us:
+
+Your Name: saketsingh9798@gmail.com
+Project Repository: https://github.com/saket5ingh/Online_Judge
 
