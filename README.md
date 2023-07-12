@@ -10,23 +10,11 @@ This project is built using Django, a high-level Python web framework. It utiliz
 ## Features
 
 - User registration and authentication
-- Problem listing and description
-- Code submission and evaluation
-- Test case management
-- Admin panel for managing problems and submissions
-
-# Online Judge
-
-The Online Judge is a web-based platform for hosting coding contests and evaluating code submissions. It allows users to solve programming problems, submit their solutions, and receive verdicts based on the evaluation of their code against test cases.
-
-## Features
-
-- User registration and authentication
 - Problem list page displaying problems available for solving
 - Submission page for submitting code solutions to problems
 - Evaluation of code submissions against test cases
 - Verdict generation based on the evaluation results
-- Leaderboard to track user scores and rankings
+- Admin panel for managing problems and submissions
 
 ## Technologies Used
 
@@ -36,14 +24,14 @@ The Online Judge is a web-based platform for hosting coding contests and evaluat
 - PostgreSQL: A powerful open-source relational database used for storing user, problem, and submission data.
 
 ## Installation
-
-1. Clone the repository:
-
-
-## Installation
-
 1. Clone the repository:
 
 ```shell
 git clone https://github.com/your-username/online-judge-platform.git
 cd online-judge-platform
+
+
+2. Create and activate a virtual environment:
+```shell
+python3 -m venv env
+source env/bin/activate
