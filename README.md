@@ -36,3 +36,48 @@ cd online-judge-platform
 python3 -m venv env
 source env/bin/activate
 ```
+
+3. Install the required dependencies:
+```
+pip install -r requirements.txt
+```
+
+4. Set up the database:
+- Create a PostgreSQL database and update the database settings in `settings.py`.
+- Run the database migrations:
+  ```
+  python manage.py migrate
+  ```
+
+5. Start the development server:
+```
+python manage.py runserver
+```
+
+6. Access the application in your browser at `http://localhost:8000`.
+
+## Usage
+
+- Register a new user account or log in with existing credentials.
+- Browse the problem list to view available problems.
+- Click on a problem to view the problem details.
+- Submit your code solution for a problem through the submission page.
+- View the verdict and results of your code submission.
+- Check the leaderboard to see your score and ranking.
+
+## Contributing
+
+Contributions to the Online Judge project are welcome! Here are some ways you can contribute:
+- Submit bug reports or feature requests through the GitHub issues.
+- Implement new features or enhancements and create a pull request.
+- Help improve the documentation by suggesting clarifications or additions.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+
+- The Online Judge project was inspired by similar coding contest platforms and online judge systems.
+- We would like to thank the Django, Docker, and PostgreSQL communities for their excellent tools and resources.
+
