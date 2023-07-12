@@ -27,7 +27,7 @@ This project is built using Django, a high-level Python web framework. It utiliz
 1. Clone the repository:
 
 ```shell
-git clone [https://github.com/your-username/online-judge-platform](https://github.com/saket5ingh/Online_Judge).git
+git clone https://github.com/saket5ingh/Online_Judge.git
 cd online-judge-platform
 ```
 
@@ -83,6 +83,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 If you have any questions or inquiries, please feel free to reach out to us:
 
-Your Name: saketsingh9798@gmail.com
-Project Repository: https://github.com/saket5ingh/Online_Judge
+- Your Name: saketsingh9798@gmail.com
+- Project Repository: https://github.com/saket5ingh/Online_Judge
 
