@@ -1,0 +1,93 @@
+{% extends 'problem/base.html' %}
+{% block content %}
+  <div class="navigation">
+    <span class="user-name">{{ request.user.username }}</span>
+    {% comment %} <a href="{% url 'dashboard' %}" class="nav-button">Dashboard</a> {% endcomment %}
+    <a href="{% url 'signout' %}" class="nav-button">Sign Out</a>
+  </div>
+  <div class="problem-list">
+    <h1>Problem List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Problem Name</th>
+          <th>Difficulty</th>
+          <th>Author</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for problem in problems %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td><a href="{% url 'submission' problem.id %}">{{ problem.title }}</a></td>
+            <td>{{ problem.difficulty }}</td>
+            <td>{{ problem.author.username }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
+
+{% block css %}
+<style>
+  body {
+    background: linear-gradient(to right, #00d2ff, #3a7bd5); 
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .user-name {
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .nav-button {
+    background-color: #555;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+
+  .nav-button:hover {
+    background-color: #777;
+  }
+
+  .problem-list {
+    margin: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #555;
+    color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+</style>
+{% endblock %}

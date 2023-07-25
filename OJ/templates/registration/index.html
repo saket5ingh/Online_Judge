@@ -1,0 +1,26 @@
+{% extends 'registration/base.html' %}
+
+{% block title %}Online Judge{% endblock title %}
+{% block body %}
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <h1 class="hero-title">Welcome to Online Judge</h1>
+          <p class="hero-description">Solve coding problems, compete with others, and improve your programming skills.</p>
+          <div class="buttons">
+            <a href="signin" class="btn btn-primary btn-lg btn-signin">Sign In</a>
+            <a href="signup" class="btn btn-light btn-lg btn-signup">Sign Up</a>
+          </div>
+          <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock body %}

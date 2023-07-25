@@ -1,0 +1,80 @@
+{% extends 'problem/base.html' %}
+
+{% block css %}
+<style>
+  body {
+    background-image: linear-gradient(to right, #00d2ff, #3a7bd5);
+    color: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  .submission-page {
+    margin: 20px;
+  }
+
+  .alert {
+    margin-top: 10px;
+  }
+
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+
+  .alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="submission-page container">
+    <h1 class="mt-4">{{ problem.title }}</h1>
+    <p class="lead">{{ problem.description }}</p>
+
+    {% if evaluation_result %}
+      {% if evaluation_result == 'Accepted' %}
+        <div class="alert alert-success">
+      {% else %}
+        <div class="alert alert-danger">
+      {% endif %}
+        <strong>Verdict:</strong> {{ evaluation_result }}
+      </div>
+    {% endif %}
+
+    <form method="POST" action="{% url 'submit_code' problem.id %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="code">Enter your code</label>
+        <textarea class="form-control" name="code" rows="10" placeholder="Enter your code"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="language">Select Language</label>
+        <select class="form-control" name="language">
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+          <option value="cpp">C++</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% if results %}
+      <h2 class="mt-4">Test Case Results:</h2>
+      <ul class="list-group">
+        {% for result in results %}
+          <li class="list-group-item">Test Case {{ result.test_case.id }}: 
+            {% if result.is_passed %}
+              <span class="text-success">Accepted</span>
+            {% else %}
+              <span class="text-danger">Error</span>
+              <p class="text-danger">Error: {{ result.actual_output }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock %}
