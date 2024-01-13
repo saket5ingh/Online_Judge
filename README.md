@@ -3,6 +3,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+![Screenshot (120)](https://github.com/saket5ingh/Online_Judge/assets/99411565/2e90a863-de0d-479c-b451-82a96f8537eb)
+
 Online Judge Platform is a web application that allows users to solve programming problems and evaluate their code submissions. It provides a platform for users to practice coding, improve their algorithmic skills.
 
 This project is built using Django, a high-level Python web framework. It utilizes Docker for secure code execution and evaluation. The application provides a user-friendly interface for problem solving, code submission, and result evaluation.
